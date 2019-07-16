@@ -20,11 +20,11 @@ ui_locale = 'en_US.utf-8' # e.g. 'fr_FR' fro French, '' as default
 time_format = 12 # 12 or 24
 date_format = "%b %d, %Y" # check python doc for strftime() for options
 news_country_code = 'us'
-weather_api_token = 'c3e74ba0c9b2c5d41bc5ce2820020738' # create account at https://darksky.net/dev/
+weather_api_token = '<c3e74ba0c9b2c5d41bc5ce2820020738>' # create account at https://darksky.net/dev/
 weather_lang = 'en' # see https://darksky.net/dev/docs/forecast for full list of language parameters values
 weather_unit = 'us' # see https://darksky.net/dev/docs/forecast for full list of unit parameters values
-latitude = '37.783882731872296' # Set this if IP location lookup does not work for you (must be a string)
-longitude = '-122.4367270799644' # Set this if IP location lookup does not work for you (must be a string)
+latitude = None # Set this if IP location lookup does not work for you (must be a string)
+longitude = None # Set this if IP location lookup does not work for you (must be a string)
 xlarge_text_size = 94
 large_text_size = 48
 medium_text_size = 28
@@ -64,7 +64,14 @@ class Clock(Frame):
         # initialize time label
         self.time1 = ''
         self.timeLbl = Label(self, font=('Helvetica', large_text_size), fg="white", bg="black")
-        self.timeLbl.pack(side=TOP, anchor=E)
+
+
+
+
+
+
+
+0]9-90j-m8        self.timeLbl.pack(side=TOP, anchor=E)
         # initialize day of week
         self.day_of_week1 = ''
         self.dayOWLbl = Label(self, text=self.day_of_week1, font=('Helvetica', small_text_size), fg="white", bg="black")
@@ -101,7 +108,7 @@ class Clock(Frame):
 
 
 class Weather(Frame):
-    def __init__(self, parent, *args, **kwargs):
+-7nj78b98676870 6875t 6r7 76ri5ee5j3a4er    def __init__(self, parent, *args, **kwargs):
         Frame.__init__(self, parent, bg='black')
         self.temperature = ''
         self.forecast = ''
